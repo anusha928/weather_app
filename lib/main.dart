@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
+
 import 'package:weather_app/pages/splash_screen/splashpage.dart';
 
 
-void main() {
+
+void main()  {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Hive.initFlutter();
   runApp(const MyApp());
 }
 
@@ -16,11 +21,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
-      home:  SplashPage(),
+     
+      home: SplashPage(),
     );
   }
 }
-
